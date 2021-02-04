@@ -9,10 +9,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Dr. Payne's Secret Messages App"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
@@ -22,74 +22,74 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textIn"
-        android:layout_width="341dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/txtIn"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:lines="4"
-        android:text="Secret messages \n are so cool, \n aren't they?"
+        android:lines="3"
+        android:text="Secret messages are so cool, \n aren't they?"
         android:textAlignment="textStart"
         android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="75dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="@+id/textIn"
-        app:layout_constraintTop_toBottomOf="@+id/textIn" />
+        android:layout_width="150dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:max="26"
+        android:progress="26"
+        app:layout_constraintStart_toStartOf="@+id/txtIn"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Key:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/seekBar"
-        app:layout_constraintTop_toBottomOf="@+id/textIn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
     <EditText
         android:id="@+id/txtKey"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number"
-        android:text="13"
+        android:text="12"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textIn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="48dp"
         android:text="ENCODE/DECODE"
-        app:layout_constraintStart_toEndOf="@+id/txtKey"
-        app:layout_constraintTop_toBottomOf="@+id/textIn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtKey" />
 
     <EditText
-        android:id="@+id/textOut"
-        android:layout_width="341dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/txtOut"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:lines="4"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="3"
         android:textAlignment="textStart"
         android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
