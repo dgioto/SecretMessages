@@ -58,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         sb = (SeekBar) findViewById(R.id.seekBar);
         btn = (Button) findViewById(R.id.button);
 
+        //получение секретных сообщений из других приложений
+        Intent receivedIntent = getIntent();
+        String receivedText = receivedIntent.getStringExtra(Intent.EXTRA_TEXT);
+        if (receivedText != null){
+            txtIn.setText(receivedText);
+        }
+
         //настраиваем слушатель кнопки ENCODE/DECODE
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
