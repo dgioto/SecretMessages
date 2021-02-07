@@ -12,7 +12,7 @@
         android:id="@+id/txtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Dr. Payne's Secret Messages App"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
     <EditText
         android:id="@+id/txtIn"
         android:layout_width="0dp"
-        android:layout_height="68dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
@@ -39,7 +39,7 @@
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="16dp"
         android:layout_marginTop="24dp"
         android:max="26"
@@ -73,15 +73,16 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:text="ENCODE/DECODE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtKey" />
+        app:layout_constraintStart_toEndOf="@+id/txtKey"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
     <EditText
         android:id="@+id/txtOut"
         android:layout_width="0dp"
-        android:layout_height="62dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine|textNoSuggestions"
