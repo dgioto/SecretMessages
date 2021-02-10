@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     EditText txtKey;
     EditText txtOut;
     SeekBar sb;
-    Button btn;
+    Button btn, btn2;
 
     public  String encode(String message, int keyVal) {
         String output = "";
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         txtOut = (EditText) findViewById(R.id.txtOut);
         sb = (SeekBar) findViewById(R.id.seekBar);
         btn = (Button) findViewById(R.id.button);
+        btn2 = (Button) findViewById(R.id.button2);
 
         //получение секретных сообщений из других приложений
         Intent receivedIntent = getIntent();
@@ -69,10 +70,21 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int key = Integer.parseInt(txtKey.getText().toString());
+                int key = (Integer.parseInt(txtKey.getText().toString())) * (-1);
                 String message = txtIn.getText().toString();
                 String output = encode(message, key);
                 txtOut.setText(output);
+            }
+        });
+
+        //настраиваем слушатель кнопки MoveUp
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int key = Integer.parseInt(txtKey.getText().toString());
+                String message = txtOut.getText().toString();
+                String inPut = encode(message, key);
+                txtIn.setText(inPut);
             }
         });
 
