@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3C3B3B"
     android:contextClickable="false"
     android:textAlignment="center"
     tools:context=".MainActivity">
@@ -13,12 +14,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="#00575656"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:lines="3"
         android:text="Secret messages are so cool, \n aren't they?"
         android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
         android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +35,8 @@
         android:layout_marginTop="24dp"
         android:max="26"
         android:progress="26"
+        android:progressTint="#FFFFFF"
+        android:thumbTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/txtIn"
         app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
@@ -42,6 +47,7 @@
         android:layout_marginTop="16dp"
         android:text="Key:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
@@ -54,6 +60,7 @@
         android:inputType="number"
         android:text="12"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/txtIn" />
 
@@ -72,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#656363"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:text="ENCODE/DECODE" />
@@ -81,6 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:backgroundTint="#656363"
             android:insetRight="8dp"
             android:text="Move Up ^" />
     </LinearLayout>
@@ -94,6 +103,7 @@
         android:inputType="textMultiLine|textNoSuggestions"
         android:lines="3"
         android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
         android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -106,7 +116,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#656363"
         android:clickable="true"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_email" />
