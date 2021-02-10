@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int key = (Integer.parseInt(txtKey.getText().toString())) * (-1);
+                int key = Integer.parseInt(txtKey.getText().toString());
                 String message = txtIn.getText().toString();
                 String output = encode(message, key);
                 txtOut.setText(output);
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int key = Integer.parseInt(txtKey.getText().toString());
+                int key = (Integer.parseInt(txtKey.getText().toString())) * (-1);
                 String message = txtOut.getText().toString();
                 String inPut = encode(message, key);
                 txtIn.setText(inPut);
